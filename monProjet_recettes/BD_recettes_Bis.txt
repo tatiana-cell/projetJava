@@ -1,0 +1,18 @@
+
+
+/////////////////BD_RECETTES_BIS///////////////////////////
+
+CREATE DATABASE BD_RECETTES_BIS;
+
+CREATE TABLE RECETTES(
+ id INTEGER NOT NULL,
+ path VARCHAR(100) NOT NULL,
+ titre VARCHAR(45),
+ isIngrd BOOLEAN,
+ ingridient VARCHAR(45),
+ calorieCategory ENUM('diététique','fitness','calorique'),
+ pastryCategory ENUM('tartes','gâteaux','entremets','petitFours','autres'),
+ cuisson ENUM('avecCuisson','sansCuisson'),
+ commentaire VARCHAR(200),
+ CONSTRAINT pk_rcttes PRIMARY KEY(id)
+);
